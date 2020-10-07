@@ -23,7 +23,7 @@
             document.referrer = "";
             opener = "";
             let input = new URL(document.location).searchParams.get("yummy");
-            if((top==window || top.length == 1) && (parent == window || parent.length == 1) && input.match(/^[\w\.]*$/gi)){
+            if(input != null && (top==window || top.length == 1) && (parent == window || parent.length == 1) && input.match(/^[\w\.]*$/gi)){
                 eval(eval(input));
             }
         </script>
